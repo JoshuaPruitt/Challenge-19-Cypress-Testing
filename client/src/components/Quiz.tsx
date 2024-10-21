@@ -44,6 +44,7 @@ const Quiz = () => {
     setCurrentQuestionIndex(0);
   };
 
+  //if the quiz has not started give the user a button to start the quiz
   if (!quizStarted) {
     return (
       <div className="p-4 text-center">
@@ -54,6 +55,7 @@ const Quiz = () => {
     );
   }
 
+  //if the quiz is complete then give the user their score
   if (quizCompleted) {
     return (
       <div className="card p-4 text-center">
@@ -80,6 +82,7 @@ const Quiz = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  //this returns the quiz questions themselves
   return (
     <div className='card p-4'>
       <h2>{currentQuestion.question}</h2>
