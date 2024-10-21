@@ -56,9 +56,27 @@ describe("User Journey", () => {
       cy.get("div button").eq(0).click();
     }
 
-    //once everything check that we are now on the score page
-    cy.get("alert-success").should(($el) => {
-      expect($el).to("be.visible");
-    });
+    //Check that the quiz completed text is on the page signifiying that we have finished the quiz
+    cy.get("div h2").invoke("text").should("equal", "Quiz Completed");
+  });
+
+  it("When the quiz is finished I can see my score.", () => {
+    //click the quiz start button
+    cy.get("div button").click();
+
+    for (let x = 0; x < 10; x++) {
+      //click the quiz question button
+      cy.get("div button").eq(0).click();
+    }
+  });
+
+  it("When the quiz is finished I can click the button to start over.", () => {
+    //click the quiz start button
+    cy.get("div button").click();
+
+    for (let x = 0; x < 10; x++) {
+      //click the quiz question button
+      cy.get("div button").eq(0).click();
+    }
   });
 });
