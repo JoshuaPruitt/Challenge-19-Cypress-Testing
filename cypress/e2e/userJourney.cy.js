@@ -68,6 +68,9 @@ describe("User Journey", () => {
       //click the quiz question button
       cy.get("div button").eq(0).click();
     }
+
+    //check that the score is displayed
+    cy.get("div div").should("be.visible");
   });
 
   it("When the quiz is finished I can click the button to start over.", () => {
@@ -78,5 +81,16 @@ describe("User Journey", () => {
       //click the quiz question button
       cy.get("div button").eq(0).click();
     }
+
+    //click the start over button
+    cy.get("div button").click();
+
+    //check we are on the quiz page by checking the question length
+    cy.get("div div")
+      .eq(1)
+      .children()
+      .eq(1)
+      .children()
+      .should("have.length", 4);
   });
 });
