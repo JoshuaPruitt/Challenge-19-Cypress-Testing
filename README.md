@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
-Click <a href="">here</a> to take you to a demonstration video of the cypress tests!
+Click <a href="https://drive.google.com/file/d/1JwW96Psgi-cQRhAdJOj01P6aq93hXJ5n/view?usp=sharing">here</a> to take you to a demonstration video of the cypress tests!
 
 ## Table of Contents
 
